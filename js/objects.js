@@ -1,12 +1,14 @@
+'use strict';
+
 // een lege object literal genaamd emptyObject
 const emptyObject = {};
 // een object literal genaamd myAvatar
 // met 4 properties
 const myAvatar = {
-	name: 'Bob',
-	points: 20,
-	gender: 'male',
-	hair: { color: 'black', cut: 'punk' }
+  name: 'Bob',
+  points: 20,
+  gender: 'male',
+  hair: { color: 'black', cut: 'punk' },
 };
 
 console.log('Hi this is my avatar...');
@@ -30,8 +32,8 @@ console.log(`Gender : '${myAvatar.gender}`);
 
 console.log(`Hi, I am ${myAvatar.name}`);
 // alle properties overlopen
-for (var key in myAvatar) {
-	console.log(`-- ${key} : ${myAvatar[key]}`);
+for (const key in myAvatar) {
+  console.log(`-- ${key} : ${myAvatar[key]}`);
 }
 
 // verzamelen van alle keys in een array
@@ -47,18 +49,18 @@ console.log(`sex: ${sex}`);
 
 //  object destructuring - nested and combined with array destructuring
 const myAvatar2 = {
-	name: 'Bob',
-	points: 20,
-	gender: 'male',
-	hair: { color: 'black', cut: 'punk' },
-	features: ['beard', 'sunglasses', 'smile']
+  name: 'Bob',
+  points: 20,
+  gender: 'male',
+  hair: { color: 'black', cut: 'punk' },
+  features: ['beard', 'sunglasses', 'smile'],
 };
 
 const {
-	name: name2,
-	hair: { color: color2 },
-	features: [first, , third],
-	gender: sex2
+  name: name2,
+  hair: { color: color2 },
+  features: [first, , third],
+  gender: sex2,
 } = myAvatar2;
 console.log('Destructuring myAvatar2:');
 console.log(`name2: ${name2}`);

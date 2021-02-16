@@ -1,13 +1,15 @@
-var myAvatar = {
-	name: 'Bob',
-	points: 20,
-	gender: 'male',
-	hair: { color: 'black', cut: 'punk' }
+'use strict';
+
+const myAvatar = {
+  name: 'Bob',
+  points: 20,
+  gender: 'male',
+  hair: { color: 'black', cut: 'punk' },
 };
 
 // Functie declaratie
 function sayHi(name) {
-	return `Hi, my name is ${name}`;
+  return `Hi, my name is ${name}`;
 }
 alert(sayHi(myAvatar.name));
 
@@ -37,11 +39,11 @@ alert(sayHi(myAvatar.name));
 // dyeHair(myAvatar);
 // console.log(`myAvatar.hair.color = ${myAvatar.hair.color}`);
 
-// // rest parameter
+// rest parameter
 // function f(a, b, ...otherArgs) {
-// 	for (var value of otherArgs) {
-// 		console.log(value);
-// 	}
+//   for (const value of otherArgs) {
+//     console.log(value);
+//   }
 // }
 // f(1, 2, 3, 'Four', 5);
 

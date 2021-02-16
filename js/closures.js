@@ -1,9 +1,11 @@
-const makeFunc = function() {
-	const message = 'Sir Bob is still around ;-)';
-	const displayName = function() {
-		console.log(message);
-	};
-	return displayName;
+'use strict';
+
+const makeFunc = function () {
+  const message = 'Sir Bob is still around ;-)';
+  const displayName = function () {
+    console.log(message);
+  };
+  return displayName;
 };
 const aDisplayFunction = makeFunc();
 console.log(aDisplayFunction());
@@ -24,21 +26,21 @@ console.log(aDisplayFunction());
 // // event handling
 
 // example1
-const makeBtnclickHandler = function(btnId) {
-	return function() {
-		alert(`You clicked button ${btnId}`);
-	};
+const makeBtnclickHandler = function (btnId) {
+  return function () {
+    alert(`You clicked button ${btnId}`);
+  };
 };
 
-const initButtons = function() {
-	for (var i = 1; i <= 3; i++) {
-		document.getElementById('btn' + i).onclick = makeBtnclickHandler(i);
-	}
+const initButtons = function () {
+  for (const i = 1; i <= 3; i++) {
+    document.getElementById('btn' + i).onclick = makeBtnclickHandler(i);
+  }
 };
 
 // // example2 - this doen't work properly!
 // const initButtons = function() {
-// 	for (var i = 1; i <= 3; i++) {
+// 	for (const i = 1; i <= 3; i++) {
 // 		document.getElementById('btn' + i).onclick = function() {
 // 			alert(`You clicked button ${i}`);
 // 		};
@@ -47,7 +49,7 @@ const initButtons = function() {
 
 // // example3
 // const initButtons = function() {
-// 	for (var i = 1; i <= 3; i++) {
+// 	for (const i = 1; i <= 3; i++) {
 // 		document.getElementById('btn' + i).onclick = function() {
 // 			alert(`You clicked button ${this.id}`);
 // 		};
