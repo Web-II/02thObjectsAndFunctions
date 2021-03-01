@@ -33,27 +33,27 @@ const makeBtnclickHandler = function (btnId) {
 };
 
 const initButtons = function () {
-  for (const i = 1; i <= 3; i++) {
+  for (let i = 1; i <= 3; i++) {
     document.getElementById('btn' + i).onclick = makeBtnclickHandler(i);
   }
 };
 
-// // example2 - this doen't work properly!
-// const initButtons = function() {
-// 	for (const i = 1; i <= 3; i++) {
-// 		document.getElementById('btn' + i).onclick = function() {
-// 			alert(`You clicked button ${i}`);
-// 		};
-// 	}
+// // example2 - without closures
+// const initButtons = function () {
+//   for (let i = 1; i <= 3; i++) {
+//     document.getElementById('btn' + i).onclick = function () {
+//       alert(`You clicked button ${i}`);
+//     };
+//   }
 // };
 
-// // example3
-// const initButtons = function() {
-// 	for (const i = 1; i <= 3; i++) {
-// 		document.getElementById('btn' + i).onclick = function() {
-// 			alert(`You clicked button ${this.id}`);
-// 		};
-// 	}
+// // example3 - with use of this
+// const initButtons = function () {
+//   for (let i = 1; i <= 3; i++) {
+//     document.getElementById('btn' + i).onclick = function () {
+//       alert(`You clicked button ${this.id}`);
+//     };
+//   }
 // };
 
 window.onload = initButtons;
